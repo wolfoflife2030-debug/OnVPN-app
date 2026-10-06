@@ -1,0 +1,14 @@
+<Window x:Class="OnVpn.Client.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="On Vpn" Width="520" Height="430" WindowStartupLocation="CenterScreen">
+  <Grid Margin="28">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <StackPanel><TextBlock Text="On Vpn" FontSize="32" FontWeight="Bold"/><TextBlock Text="Secure • Fast • Economic" FontSize="14" Opacity="0.7"/></StackPanel>
+    <StackPanel Grid.Row="1" VerticalAlignment="Center">
+      <TextBlock x:Name="StatusText" Text="غير متصل" FontSize="24" HorizontalAlignment="Center" Margin="0,10"/>
+      <TextBlock x:Name="StatsText" Text="RX 0 B  •  TX 0 B" HorizontalAlignment="Center" Margin="0,4"/>
+      <Button x:Name="ConnectButton" Content="اتصال" Width="180" Click="Connect_Click" HorizontalAlignment="Center" Margin="0,22"/>
+      <Button Content="استيراد إعداد WireGuard" Width="220" Click="Import_Click" HorizontalAlignment="Center"/>
+      <TextBlock x:Name="ConfigText" Text="لم يتم اختيار إعداد" HorizontalAlignment="Center" Margin="0,12" TextWrapping="Wrap"/>
+    </StackPanel>
+    <TextBlock Grid.Row="2" Text="On Vpn • Windows MVP" HorizontalAlignment="Center" Opacity="0.55"/>
+  </Grid>
+</Window>
